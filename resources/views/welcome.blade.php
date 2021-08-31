@@ -60,7 +60,7 @@
                                     $users = DB::table('users')->cursor();
                                     foreach ($users as $user) {
                                         echo $user->name;
-                                        echo <br>;
+                                        echo "<br>";
                                     }
                                     ?>
                                 </div>
