@@ -106,21 +106,23 @@
                             </div>
 
                             <div>
-                                <form action='' method='post'>
+                                <form method="POST" action="{{ route('addArticle') }}">
                                     @csrf
-                                    <p><label>Author</label><br/>
-                                        <input type='text' name='articlesAuthor' value=''><?php if (isset($error)) {
-                                            echo $_POST['articlesName'];
-                                        }?></p>
-                                    <p><label>Name</label><br/>
-                                        <textarea name='articlesName' cols='60' rows='10'><?php if (isset($error)) {
-                                                echo $_POST['articlesAuthor'];
-                                            }?></textarea></p>
-                                    <p><label>Content</label><br/>
-                                        <textarea name='articlesContent' cols='60' rows='10'><?php if (isset($error)) {
-                                                echo $_POST['articlesContent'];
-                                            }?></textarea></p>
-                                    <p><input type='submit' name='submit' value='Submit'></p>
+                        
+                                    <div>
+                                        <x-jet-label for="articlesName" value="{{ __('articlesName') }}" />
+                                        <x-jet-input id="articlesName" class="block mt-1 w-full" type="text" name="articlesAuthor" :value="old('name')" required />
+                                    </div>
+                        
+                                    <div class="mt-4">
+                                        <x-jet-label for="articlesName" value="{{ __('articlesName') }}" />
+                                        <x-jet-input id="articlesName" class="block mt-1 w-full" type="text" name="articlesName" :value="old('email')" required />
+                                    </div>
+                        
+                                    <div class="mt-4">
+                                        <x-jet-label for="articlesContent" value="{{ __('articlesContent') }}" />
+                                        <x-jet-input id="articlesContent" class="block mt-1 w-full" type="text" name="articlesContent" required />
+                                    </div>
                                 </form>
                             </div>
                         </div>
