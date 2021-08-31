@@ -57,18 +57,8 @@
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     Laravel has wonderful, 
                                     <?php
-                                    $sql = "SELECT * FROM MY_TABLE";
-$result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
-echo "<br>";
-echo "<table border='1'>";
-while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
-    echo "<tr>";
-    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
-    }
-    echo "</tr>";
-}
-echo "</table>";
+                                    $results = DB::select('select * from users');
+                                    echo $results;
                                     ?>
                                     
                                     thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
