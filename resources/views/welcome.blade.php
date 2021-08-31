@@ -79,7 +79,7 @@
                                     <?php
                                     $users = DB::table('articles')->cursor();
                                     foreach ($articles as $article) {
-                                        echo $artile->article content;
+                                        echo $artile->articleContent;
                                         echo "<br>";
                                     }
                                     ?>
