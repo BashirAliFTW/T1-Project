@@ -110,19 +110,22 @@
                                     @csrf
                         
                                     <div>
-                                        <x-jet-label for="articlesName" value="{{ __('articlesName') }}" />
-                                        <x-jet-input id="articlesName" class="block mt-1 w-full" type="text" name="articlesAuthor" :value="old('name')" required />
+                                        <x-jet-label for="articlesAuthor" value="{{ __('articlesAuthor') }}" />
+                                        <x-jet-input id="articlesAuthor" class="block mt-1 w-full" type="text" name="articlesAuthor" :value="old('articlesAuthor')"/>
                                     </div>
                         
                                     <div class="mt-4">
                                         <x-jet-label for="articlesName" value="{{ __('articlesName') }}" />
-                                        <x-jet-input id="articlesName" class="block mt-1 w-full" type="text" name="articlesName" :value="old('email')" required />
+                                        <x-jet-input id="articlesName" class="block mt-1 w-full" type="text" name="articlesName" :value="old('articlesName')"/>
                                     </div>
                         
                                     <div class="mt-4">
                                         <x-jet-label for="articlesContent" value="{{ __('articlesContent') }}" />
-                                        <x-jet-input id="articlesContent" class="block mt-1 w-full" type="text" name="articlesContent" required />
+                                        <x-jet-input id="articlesContent" class="block mt-1 w-full" type="text" name="articlesContent"/>
                                     </div>
+                                    <x-jet-button class="ml-4">
+                                        {{ __('Register') }}
+                                    </x-jet-button>
                                 </form>
                             </div>
                         </div>
