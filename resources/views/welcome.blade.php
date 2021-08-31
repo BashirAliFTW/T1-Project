@@ -58,10 +58,10 @@
                                     Laravel has wonderful, 
                                     <?php
                                     $users = DB::table('users')->cursor();
-
-foreach ($users as $user) {
-    echo $user->name;
-}
+                                    foreach ($users as $user) {
+                                        echo $user->name;
+                                        echo "\n";
+                                    }
                                     ?>
                                     
                                     thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
