@@ -24,3 +24,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/articles', function () {
     return view('articles');
 });
+
+Route::view('form', 'userview');
+Route::view('sumbit', 'articles');
