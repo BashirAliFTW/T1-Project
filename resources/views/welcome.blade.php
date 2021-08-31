@@ -60,7 +60,7 @@
                                     $users = DB::table('users')->cursor();
 
 foreach ($users as $user) {
-    echo $user->user;
+    echo $user->name;
 }
                                     ?>
                                     
