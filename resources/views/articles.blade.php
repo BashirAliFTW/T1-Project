@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+
     <h1> page full of articles</h1>
     <section class="wrapper">
         <div class="container-fostrap">
@@ -81,5 +81,5 @@
             </div>
         </div>
     </section>
-@stop
+
 
