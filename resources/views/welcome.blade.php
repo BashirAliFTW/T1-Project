@@ -55,12 +55,12 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has users: "<br>"
+                                    This news site has users!:<br>
                                     <?php
                                     $users = DB::table('users')->cursor();
                                     foreach ($users as $user) {
                                         echo $user->name;
-                                        echo "<br>";
+                                        echo <br>;
                                     }
                                     ?>
                                 </div>
