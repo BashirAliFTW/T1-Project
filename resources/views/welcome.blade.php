@@ -106,7 +106,7 @@
                             </div>
 
                             <div>
-                                <form method="POST" action="{{ route('addArticle') }}">
+                                <form method="POST" action="{{ route('articles') }}">
                                     @csrf
                         
                                     <div>
