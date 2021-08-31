@@ -104,6 +104,25 @@
                                     Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
                                 </div>
                             </div>
+
+                            <div>
+                                <form action='' method='post'>
+                                    @csrf
+                                    <p><label>Author</label><br/>
+                                        <input type='text' name='articlesAuthor' value=''><?php if (isset($error)) {
+                                            echo $_POST['articlesName'];
+                                        }?></p>
+                                    <p><label>Name</label><br/>
+                                        <textarea name='articlesName' cols='60' rows='10'><?php if (isset($error)) {
+                                                echo $_POST['articlesAuthor'];
+                                            }?></textarea></p>
+                                    <p><label>Content</label><br/>
+                                        <textarea name='articlesContent' cols='60' rows='10'><?php if (isset($error)) {
+                                                echo $_POST['articlesContent'];
+                                            }?></textarea></p>
+                                    <p><input type='submit' name='submit' value='Submit'></p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
