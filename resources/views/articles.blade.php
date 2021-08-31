@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
-
-    <h1> page full of articles</h1>
+@section('content')
     <section class="wrapper">
         <div class="container-fostrap">
             <div>
-                <img src="https://4.bp.blogspot.com/-7OHSFmygfYQ/VtLSb1xe8kI/AAAAAAAABjI/FxaRp5xW2JQ/s320/logo.png" class="fostrap-logo"/>
                 <h1 class="heading">
-                    Bootstrap Card Responsive 
+                    Latest news
                 </h1>
             </div>
             <div class="content">
@@ -81,5 +79,5 @@
             </div>
         </div>
     </section>
-
+@stop
 
