@@ -33,7 +33,7 @@
                     
                                         <div class="form-group ">
                                             <label for="inputState" class="text-primary" >Category</label>
-                                            {{ Form::select('tag', ['Computers', 'Mobile' , 'Hardware' ] , array('class' => 'form-control')) }}
+                                            {{ Form::select('tag', ['Computers' => 'Computers','Mobile' => 'Mobile' ,'Hardware' => 'Hardware' ] , array('class' => 'form-control')) }}
                                             
                                         </div>
                                     <div class="form-group">

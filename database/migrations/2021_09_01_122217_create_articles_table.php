@@ -23,6 +23,7 @@ class CreateArticlesTable extends Migration
             $table->string('articlesContent');
             $table->string('articlesTag');
             $table->foreignId('user_id')->constrained();
+            $table->timestamps();
         });
     }
 
