@@ -33,8 +33,8 @@
                     
                                         <div class="form-group ">
                                             <label for="inputState" class="text-primary" >Category</label>
-                                            {{ Form::select('category', ['Computers', 'Mobile' , 'Hardware' ] , array('class' => 'form-control')) }}
-                                            </select>
+                                            {{ Form::select('tag', ['Computers', 'Mobile' , 'Hardware' ] , array('class' => 'form-control')) }}
+                                            
                                         </div>
                                     <div class="form-group">
                                     {{ Form::submit('Create', array('class' => 'btn btn-default')) }}

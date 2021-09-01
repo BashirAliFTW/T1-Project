@@ -17,17 +17,19 @@ class ArticleController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'title' => 'required',
             'email' => 'required',
-            'body' => 'required',
-            'tags' => 'required'
+            'content' => 'required',
+            'tag' => 'required'
         ]);
         $Article = new Article;
-        $Article->name = $requrest->input('name');
-        $Article->date = date("Y/m/d");
-        $Article->time = date("h:i:sa");
-        $Article->email = $requrest->input('email');
-        $Article->body = $requrest->input('body');
-        $Article->tag = $requrest->input('tag');
+        $Article->articlesAuthor = $requrest->input('name');
+        $Article->articlesTitle = $request->input('title');
+        $Article->articlesDate = date("Y/m/d");
+        $Article->articlesTime = date("h:i:sa");
+        $Article->articlesEmail = $requrest->input('email');
+        $Article->articlesContent = $requrest->input('content');
+        $Article->articlesTag = $requrest->input('tag');
         $Article->user_id = Auth::user()->id;
         $Article->save();
         return back()->with('success_message', 'Success, article added!');
