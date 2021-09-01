@@ -26,10 +26,14 @@
       
         <div class="min-h-screen bg-gray-100">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="flex-shrink-0 flex items-center">
+                    <a href="{{ route('dashboard') }}">
+                        <x-jet-application-mark class="block h-9 w-auto" />
+                    </a>
+                    <a class="navbar-brand" href="{{ route('dashboard') }}">TechnoTimes</a>
+             </div>
             <a class="navbar-brand" href="#">TechnoTimes</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
 
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
