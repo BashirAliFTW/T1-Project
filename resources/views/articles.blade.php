@@ -88,11 +88,9 @@
                                                 </a>
                                             </h4>
                                             <p class="">
-                                                <?php 
-                                                for($var=0; $var<20; $var++){
-                                                    echo $data->articlesContent; 
-                                                }
-                                                    ?>
+                                                <?php echo $data->articles
+                                                $pos=strpos($data, ' ', 200);
+                                                $data=substr($data,0,$pos );?>
                                             </p>
                                         </div>
                                     <div class="card-read-more">
