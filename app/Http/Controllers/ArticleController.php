@@ -32,5 +32,12 @@ class ArticleController extends Controller
         $Article->save();
         return back()->with('success_message', 'Success, article added!');
     }
+
+public function list(){
+    $data = Article::all();
+    return view('articles',['data'->$data]);
+
+}
+
 }
 
