@@ -20,13 +20,13 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/home', function () {
+Route::get('/index', function () {
     return view('index');
-})->name('home');
+})->name('index');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/homd', function () {
-    return view('home');
-})->name('home');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 Route::get('/articles', function () {
     return view('articles');
