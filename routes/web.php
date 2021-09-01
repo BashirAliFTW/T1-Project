@@ -24,9 +24,9 @@ Route::get('/home', function () {
     return view('index');
 })->name('home');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/homd', function () {
+    return view('home');
+})->name('home');
 
 Route::get('/articles', function () {
     return view('articles');
