@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <?php
-                            $articles = DB::table('users')->cursor(); 
+                            $articles = DB::table('articles')->cursor(); 
                             foreach ($articles as $data)  { ?>
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="card">
@@ -84,11 +84,11 @@
                                           </a>
                                         <div class="card-content">
                                             <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> <?php echo $data->name ?>
+                                                <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> <?php echo $data->articlesTitle ?>
                                                 </a>
                                             </h4>
                                             <p class="">
-                                                <?php echo $data->email ?>
+                                                <?php echo $data->articlesContent ?>
                                             </p>
                                         </div>
                                     <div class="card-read-more">
