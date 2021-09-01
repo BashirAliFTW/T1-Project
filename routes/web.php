@@ -27,7 +27,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/articles', function () {
     return view('articles');
-});
+})->middleware('auth');
+
+
 Route::get('/article', [App\Http\Controllers\ArticleController::class, 'index'])->name('article');
 Route::resource('Article', 'App\Http\Controllers\ArticleController');
 Route::view('form', 'userview');
