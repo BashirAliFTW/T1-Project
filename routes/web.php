@@ -29,5 +29,6 @@ Route::get('/articles', function () {
     return view('articles');
 });
 Route::get('/article', [App\Http\Controllers\ArticleController::class, 'index'])->name('article');
+Route::resource('Article', 'App\Http\Controllers\ArticleController');
 Route::view('form', 'userview');
 Route::view('sumbit', 'articles');
