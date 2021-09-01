@@ -7,6 +7,14 @@
                 <h1 class="heading">
                     Latest news
                 </h1>
+                <x-jet-dropdown align="right" width="48">
+                        <x-slot name="trigger">
+                            <select name="Category" data-dependent="state">
+                                
+                            </select>
+                            
+                        </x-slot>
+                </x-jet-dropdown>
             </div>
             <div class="content">
                 <div class="container">
