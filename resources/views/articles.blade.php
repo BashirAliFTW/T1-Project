@@ -89,7 +89,7 @@
                                             </h4>
                                             <p class="">
                                                 <?php 
-                                                $temp = $data->articles;
+                                                $temp = $data->articlesContent;
                                                 echo $temp ?>
                                             </p>
                                         </div>
