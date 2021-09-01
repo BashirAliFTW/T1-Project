@@ -9,7 +9,9 @@
                 </h1>
                 <label for="tags">Choose category</label>
                 <select name="tags" id="tags">
-                    <option value="volvo">Volvo</option>
+                    <?php 
+                    $tags = DB::table('articles')->pluck('articleTag');?>
+                    <option value="volvo"><?php $tag ?></option>
                     <option value="saab">Saab</option>
                     <option value="opel">Opel</option>
                     <option value="audi">Audi</option>
