@@ -92,8 +92,7 @@
                                     <?php
                                     $articles = DB::table('articles')->cursor();
                                     foreach ($articles as $article) {
-                                        echo $article->articlesName;
-                                        echo $article->articlesContent;
+                                        echo $article->name;
                                         echo "<br>";
                                     }
                                     ?>

@@ -64,7 +64,13 @@
                                       </a>
                                     </h4>
                                     <p class="">
-                                        tutorials button hover animation, although very much a hover button is very beauti...
+                                        <?php
+                                        $articles = DB::table('users')->cursor();
+                                        foreach ($articles as $data) {
+                                            echo $data->name;
+                                            echo "<br>";
+                                        }
+                                        ?>
                                     </p>
                                 </div>
                                 <div class="card-read-more">
@@ -74,6 +80,32 @@
                                 </div>
                             </div>
                         </div>
+                        <?php
+                            $articles = DB::table('users')->cursor(); 
+                            foreach ($articles as $data)  { ?>
+                                <div class="col-xs-12 col-sm-4">
+                                    <div class="card">
+                                        <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                                            <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
+                                        </a>
+                                        <div class="card-content">
+                                            <h4 class="card-title">
+                                                <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> <?php echo $data->name ?>
+                                                </a>
+                                            </h4>
+                                            <p class="">
+                                                <?php echo $data->email ?>
+                                            </p>
+                                        </div>
+                                    <div class="card-read-more">
+                                        <a href="https://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                        Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                           <?php  } ?>
+                        
                     </div>
                 </div>
             </div>
