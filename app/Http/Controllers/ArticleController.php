@@ -30,7 +30,7 @@ class ArticleController extends Controller
         $Article->articlesEmail = $request->input('email');
         $Article->articlesContent = $request->input('content');
         $Article->articlesTag = $request->input('tag');
-        $Article->user_id = Auth::user()->id;
+        $Article->user_id = $request->user()->id;
         $Article->save();
         return back()->with('success_message', 'Success, article added!');
     }
