@@ -88,7 +88,7 @@
                                                 </a>
                                             </h4>
                                             <p class="">
-                                                <?php echo $data->articles
+                                                <?php echo $data->articles;
                                                 $pos=strpos($data, ' ', 200);
                                                 $data=substr($data,0,$pos );?>
                                             </p>
