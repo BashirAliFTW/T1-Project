@@ -90,7 +90,7 @@
                                             <p class="">
                                                 <?php 
                                                 for($var=0; $var<20; $var++){
-                                                    echo $data->articlesContent 
+                                                    echo $data->articlesContent; 
                                                 }
                                                     ?>
                                             </p>
