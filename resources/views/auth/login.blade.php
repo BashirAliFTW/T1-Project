@@ -41,7 +41,7 @@
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}
                     <?php
-                    return redirect()->route('your_route');
+                    return redirect()->route('index');
                     ?>
                 </x-jet-button>
             </div>
