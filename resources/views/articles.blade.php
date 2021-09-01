@@ -64,7 +64,9 @@
                                       </a>
                                     </h4>
                                     <p class="">
-                                        tutorials button hover animation, although very much a hover button is very beauti...
+                                        @foreach ($data as $i)
+                                            $i->name
+                                        @endforeach
                                     </p>
                                 </div>
                                 <div class="card-read-more">
