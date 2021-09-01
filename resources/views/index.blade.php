@@ -1,136 +1,112 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-        <!-- Styles -->
-        <style>
-
-html,
-body {
-  height: 100%;
-  background-color: #fff;
-}
-body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 600px;
-    background: url("https://news.microsoft.com/wp-content/uploads/2016/07/1L3B3932-copy.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100%;
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
-
-/*
- * Affix and center
- */
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-    padding-bottom:10%;
-  }
-
-}
-        </style>
-
-        <style>
-            body {
-                font-family: sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-               <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    TechnoTimes
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                   
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                      
-                       
-                    @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                    @endif
-                @endauth
+@section('content')
+<section class="wrapper">
+        <div class="container-fostrap">
+            <div>
+                <h1 class="heading">
+                    Latest news
+                </h1>
             </div>
-        @endif
-                     
-                    </ul>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                                <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                              </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Bootstrap 3 Carousel FadeIn Out Effect
+                                      </a>
+                                    </h4>
+                                    <p class="">
+                                        Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                                <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
+                              </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> Material Design Responsive Menu
+                                      </a>
+                                    </h4>
+                                    <p class="">
+                                        Material Design is a visual programming language made by Google. Language programming...
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="https://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                                <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
+                              </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">5  Button Hover Animation Effects
+                                      </a>
+                                    </h4>
+                                    <p class="">
+                                        Loren impsum
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                            $articles = DB::table('articles')->cursor(); 
+                            foreach ($articles as $data)  { ?>
+                                <div class="col-xs-12 col-sm-4">
+                                    <div class="card">
+                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                                            <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                                          </a>
+                                        <div class="card-content">
+                                            <h4 class="card-title">
+                                                <a href="http://www.fostrap.com/2016/02/awesome-material-design-responsive-menu.html"> <?php echo $data->articlesTitle ?>
+                                                </a>
+                                            </h4>
+                                            <p class="">
+                                                <?php 
+                                                $temp = $data->articlesContent;
+                                                $pos=strpos($temp," ",200);
+                                                $temp = substr($temp,0,$pos);
+                                                echo $temp ?>
+                                            </p>
+                                        </div>
+                                    <div class="card-read-more">
+                                        <a href="https://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                        Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                           <?php  } ?>
+                        
+                    </div>
                 </div>
             </div>
-           
-        </nav>
-    
-         <div class="site-wrapper">
-
-             <div class="site-wrapper-inner">
-
-             <div class="container">
-
-          <div class="masthead clearfix">
-           
-             
-          
-            
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">TechnoTimes</h1>
-            <p class="lead">For all your daily tech articles</p>
-            
-          </div>
-
         </div>
-
-      </div>
-
-    </div>
-           
-     
-    </body>
-</html>
+    </section>
+@endsection
