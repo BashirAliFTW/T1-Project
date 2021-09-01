@@ -22,7 +22,7 @@ Route::get('/welcome', function () {
 });
 Route::get('/home', function () {
     return view('index');
-});
+})->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
