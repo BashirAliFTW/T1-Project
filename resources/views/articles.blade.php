@@ -90,6 +90,8 @@
                                             <p class="">
                                                 <?php 
                                                 $temp = $data->articlesContent;
+                                                $pos=strpos($temp," ",200);
+                                                $temp = substr($temp,0,$pos);
                                                 echo $temp ?>
                                             </p>
                                         </div>
