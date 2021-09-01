@@ -12,10 +12,11 @@
                     <?php 
                     $tags = DB::table('articles')->pluck('articlesTag');?>
                     <option value="volvo">{{ $tags }}</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+                    <option value="computer">Computers</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="hardware">Hardware</option>
                 </select>
+                {{ Form::submit('submit') }}
                 <br>
                 <br>
             </div>
