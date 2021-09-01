@@ -88,7 +88,7 @@
                                                 </a>
                                             </h4>
                                             <p class="">
-                                                <?php echo $data->articlesContent ?>
+                                                <?php echo $data->articlesContent->take(20)?>
                                             </p>
                                         </div>
                                     <div class="card-read-more">
