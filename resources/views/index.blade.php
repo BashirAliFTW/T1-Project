@@ -7,7 +7,13 @@
                 <h1 class="heading">
                     Latest news
                 </h1>
-                
+                <label for="tags">Choose category</label>
+                <select name="tags" id="tags">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
             </div>
             <div class="content">
                 <div class="container">
