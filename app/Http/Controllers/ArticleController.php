@@ -32,7 +32,7 @@ class ArticleController extends Controller
         $Article->articlesTag = $request->input('tag');
         $Article->user_id = $request->user()->id;
         $Article->save();
-        return redirect()->back()->with('success_message', 'Success, article added!');
+        return redirect('articles')->back()->with('success_message', 'Success, article added!');
     }
 
 public function list(){
