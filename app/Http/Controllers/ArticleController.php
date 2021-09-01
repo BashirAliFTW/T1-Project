@@ -26,7 +26,7 @@ class ArticleController extends Controller
         $Article->articlesAuthor = $request->input('name');
         $Article->articlesTitle = $request->input('title');
         $Article->articlesDate = date("Y/m/d");
-        $Article->articlesTime = date("h:i:sa");
+        $Article->articlesTime = date("h:i:s");
         $Article->articlesEmail = $request->input('email');
         $Article->articlesContent = $request->input('content');
         $Article->articlesTag = $request->input('tag');
