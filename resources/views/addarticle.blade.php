@@ -9,33 +9,31 @@
                             <div class="card-body">
                                 <div class="row justify-content-center">
                                     <div class="col-md-8 col-md-offset-3">
-                                    {!! Form::open(['route' => 'Article.store', 'method' => 'POST', 'files' => true ])!!}
+                                    {!! Form::open(['route' => 'Article.store', 'method' => 'POST', 'files' => false])!!}
                                     @csrf
                                         <div class="form-group">
                                             <p class="text-primary" ><strong>Title</strong></p>
-                                            <input type="text" class="form-control" id="Title" placeholder="Title...">
+                                            {{ Form::text('Title',null, array('class' => 'form-control')) }}
                                         </div>            
                                         <div class="row form-group">
                                             <div class="col">
                                                 <p class="text-primary" ><strong>Author's name</strong></p>
-                                                <input type="text" class="form-control" id="name" placeholder="Name...">
+                                                {{ Form::text('name',null, array('class' => 'form-control') ) }}
                                             </div>
                                             <div class="col">
-                                                <p class="text-primary" ><strong>Date</strong></p>
-                                                <input type="text" class="form-control" id="Date" placeholder="Date...">
+                                                <p class="text-primary" ><strong>Email</strong></p>
+                                                {{ Form::email('email','example@gmail.com', array('class' => 'form-control')) }}
                                             </div>
                                         </div>
                                         
                                         <div class="form-group">
                                              <p class="text-primary" ><strong>Description</strong></p>
-                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Write Something ..."></textarea>
+                                             {{ Form::textarea('description',null, array('class' => 'form-control')) }}
                                         </div>
                     
                                         <div class="form-group ">
                                             <label for="inputState" class="text-primary" >Category</label>
-                                            <select id="inpu tState" class="form-control">
-                                              <option selected>Hardware</option>
-                                              <option>Gaming</option>
+                                            {{ Form::select('size', ['L' => 'Large', 'S' => 'Small'], 'S'); }}
                                             </select>
                                         </div>
                                     <div class="form-group">
