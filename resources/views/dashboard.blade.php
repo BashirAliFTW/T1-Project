@@ -14,7 +14,8 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            background-color: aqua;
+            overflow: auto;
+            background-color: rgb(77, 77, 77);
         }
 
         li:not(.signin) {
