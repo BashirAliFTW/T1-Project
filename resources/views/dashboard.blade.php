@@ -14,7 +14,7 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            overflow: auto;
+            overflow: hidden;
             background-color: rgb(77, 77, 77);
         }
 
