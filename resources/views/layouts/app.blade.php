@@ -40,12 +40,16 @@
                     <li class="nav-item active">
                         <a class="nav-link text-primary" href="{{ url('/home') }}">Home<span class="sr-only">(current)</span></a>
                     </li>
+                    @if(Route('login'))
+                        @auth
                     <li class="nav-item">
                         <a class="nav-link text-primary" href="{{ route('article') }}">Add An Article</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-primary disabled" href="#">Edit My Articles</a>
                     </li>
+                        @endauth
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link text-primary disabled" href="#">About us</a>
                     </li>
@@ -53,6 +57,8 @@
                 </ul>
             </div>
             <div class="ml-3 relative">
+                @if(Route('login'))
+                        @auth
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
 
@@ -73,10 +79,7 @@
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
                             </div>
-
-
                             <div class="border-t border-gray-100"></div>
-
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -89,6 +92,11 @@
                             </form>
                         </x-slot>
                     </x-jet-dropdown>
+                        @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                    @endauth
+                    @endif
                 </div>
         </nav>
             <!-- Page Content -->
