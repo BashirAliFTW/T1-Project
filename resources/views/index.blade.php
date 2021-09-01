@@ -12,7 +12,7 @@
                             <select name="Category" data-dependent="state">
                                 
                             </select>
-                            {{ Form::Submit('sumbit') }}
+                            
                         </x-slot>
                 </x-jet-dropdown>
             </div>
