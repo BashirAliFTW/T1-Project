@@ -11,13 +11,13 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden text-primary space-x-8 sm:-my-px sm:ml-10 sm:flex ">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')" class= "text-primary">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden text-primary space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('article') }}" :active="request()->routeIs('article')">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('article') }}" :active="request()->routeIs('article')"  class= "text-primary">
                         {{ __('Add article') }}
                     </x-jet-nav-link>
                 </div>
