@@ -25,14 +25,14 @@
     <body class="font-sans antialiased">
       
         <div class="min-h-screen bg-gray-100">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 ">
             <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
-                    <a class="navbar-brand" href="{{ route('dashboard') }}">TechnoTimes</a>
+                    <a class="navbar-brand text-primary" href="{{ route('dashboard') }}">TechnoTimes</a>
              </div>
-            <a class="navbar-brand" href="#">TechnoTimes</a>
+
 
 
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
