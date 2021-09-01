@@ -88,14 +88,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Testing to view current articles in database<br>
-                                    <?php
-                                    $articles = DB::table('articles')->cursor();
-                                    foreach ($articles as $article) {
-                                        echo $article->name;
-                                        echo "<br>";
-                                    }
-                                    ?>
+                                    <p>Testing to view current articles in database</p>
                                 </div>
                             </div>
                         </div>
