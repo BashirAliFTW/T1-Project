@@ -12,6 +12,11 @@ class ArticleController extends Controller
     {
         return view('addarticle');
     }
+    public function select(Request $request, $id)
+    {
+        $Article = Article::where(['articleid' => $id])->first();
+        return view('article', compact('Article'));
+    }
 
     public function store(Request $request)
     {

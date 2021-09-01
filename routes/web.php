@@ -35,5 +35,6 @@ Route::get('/articles', function () {
 
 Route::get('/article', [App\Http\Controllers\ArticleController::class, 'index'])->name('article');
 Route::resource('Article', 'App\Http\Controllers\ArticleController');
+Route::get('article/{id}', ['as' => 'article.select', 'uses' => 'App\Http\Controllers\ArticleController@select']);
 Route::view('form', 'userview');
 Route::view('sumbit', 'articles');

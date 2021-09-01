@@ -104,7 +104,7 @@
                                             </p>
                                         </div>
                                     <div class="card-read-more">
-                                        <a href="https://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                        <a href="{{ route('article.select' , $data->articleid) }}" class="btn btn-link btn-block">
                                         Read More
                                         </a>
                                     </div>
