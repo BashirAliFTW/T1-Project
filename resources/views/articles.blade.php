@@ -88,8 +88,9 @@
                                                 </a>
                                             </h4>
                                             <p class="">
-                                                <?php $data->articles;
-                                                echo $data;
+                                                <?php 
+                                                $temp = $data->articles;
+                                                echo $temp ?>
                                             </p>
                                         </div>
                                     <div class="card-read-more">
