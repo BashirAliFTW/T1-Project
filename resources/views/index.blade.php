@@ -29,7 +29,7 @@
         @endif
     </div>
     <!--Navigation Bar-->
-    <div class="nav">
+    <div class="row">
         <div class="col" align="center" style="background-color:lavender;"><a href="signin.html">Sign Out</a>
         </div>
         <div class="col" align="center" style="background-color:lavender;"><a href="{{ route('article') }}">Add an
