@@ -1,51 +1,62 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="container mt-2">
-                    <div class="row">
-                      <div class="col-md-3 col-sm-6">
-                        <div class="card card-block">
-                        <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-                      <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
-                          <h5 class="card-title mt-3 mb-3">Sierra Web Development • Owner</h5>
-                          <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
-                    </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="card card-block">
-                        <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-                      <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
-                          <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                          <p class="card-text">This is a company that builds websites, web .</p> 
-                    </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="card card-block">
-                        <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-                      <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
-                          <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                          <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
-                    </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="card card-block">
-                        <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-                      <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
-                          <h5 class="card-title  mt-3 mb-3">ProVyuh</h5>
-                          <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p> 
-                    </div>
-                      </div>    
-                    </div>
-                  </div>
-                <x-jet-welcome />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div
+        class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        @if (Route::has('login'))
+            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                    @endif
+                @endauth
             </div>
+        @endif
+    </div>
+    <!--Navigation Bar-->
+    <div class="nav">
+        <div class="col" align="center" style="background-color:lavender;"><a href="signin.html">Sign Out</a>
+        </div>
+        <div class="col" align="center" style="background-color:lavender;"><a href="{{ route('article') }}">Add an
+                article</a></div>
+        <div class="col" align="center" style="background-color:lavender;"><a href="aboutus.html">About us</a>
         </div>
     </div>
-</x-app-layout>
+    <!--Main Title-->
+    <div class="container.fluid p-3 my-3 bg-dark text-white">
+        <h1 class="display-2" align="center">Techno Times Main Page</h1><br>
+        <h1 class="display-4" align="center">By Team R1</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <article id="0">
+                <h1 class="display-5" align="center">Article 1</h1>
+                <p align="center">Article 1 text</p>
+            </article>
+        </div>
+        <div class="col">
+            <article id="1">
+                <h1 class="display-5" align="center">Article 2</h1>
+                <p align="center">Article 2 text</p>
+            </article>
+        </div>
+
+    </div>
+</body>
+
+</html>
