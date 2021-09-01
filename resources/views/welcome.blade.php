@@ -90,7 +90,7 @@
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     Testing to view current articles in database<br>
                                     <?php
-                                    $artcile = DB::table('articles')->cursor();
+                                    $articles = DB::table('articles')->cursor();
                                     foreach ($articles as $article) {
                                         echo $article->articlesName;
                                         echo $article->articlesContent;
