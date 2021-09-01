@@ -89,12 +89,10 @@
                                             </h4>
                                             <p class="">
                                                 <?php 
-                                                @for($var=0; $var<20; $var++)
+                                                for($var=0; $var<20; $var++){
                                                     echo $data->articlesContent 
-                                                @endfor
-                                                    ?>
                                                 }
-                                                    
+                                                    ?>
                                             </p>
                                         </div>
                                     <div class="card-read-more">
