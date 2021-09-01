@@ -89,8 +89,7 @@
                                             </h4>
                                             <p class="">
                                                 <?php $data->articles;
-                                                $pos=strpos(articles, ' ', 200);
-                                                echo articles=substr(articles,0,$pos );?>
+                                                echo $data;
                                             </p>
                                         </div>
                                     <div class="card-read-more">
