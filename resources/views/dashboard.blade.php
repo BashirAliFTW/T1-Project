@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-        .nav ul {
+        .nav {
             list-style-type: none;
             padding: 0;
             margin: 0;
@@ -18,21 +18,13 @@
             background-color: rgb(77, 77, 77);
         }
 
-        .nav ul li:not(.signin) {
-            float: left;
-        }
-
-        .signin {
-            float: right;
-        }
-
-        .nav ul li a {
+        .nav li a {
             display: block;
             color: black;
             padding: 14px 16px;
         }
 
-        .nav ul li a:hover {
+        .nav li a:hover {
             background-color: rgb(0, 0, 0);
             color: aliceblue;
         }
@@ -57,16 +49,14 @@
         @endif
     </div>
     <!--Navigation Bar-->
-    <div class=nav>
-        <ul>
-            <li class="signin"><a href="signin.html">Sign Out</a>
-            </li>
-            <li class="addarticle"><a href="{{ route('article') }}">Add an article</a>
-            </li>
-            <li class="about"><a href="aboutus.html">About us</a>
-            </li>
-        <ul>
-    </div>
+    <ul class="nav">
+        <li class="signin"><a href="signin.html">Sign Out</a>
+        </li>
+        <li class="addarticle"><a href="{{ route('article') }}">Add an article</a>
+        </li>
+        <li class="about"><a href="aboutus.html">About us</a>
+        </li>
+    <ul>
     <!--Main Title-->
     <div class="container.fluid p-3 my-3 bg-dark text-white">
         <h1 class="display-2" align="center">Techno Times Main Page</h1><br>
