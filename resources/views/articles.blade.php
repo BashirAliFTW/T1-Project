@@ -65,7 +65,7 @@
                                     </h4>
                                     <p class="">
                                         <?php
-                                        $articles = DB::table('articles')->cursor();
+                                        $articles = DB::table('users')->cursor();
                                         foreach ($articles as $data) {
                                             echo $data->name;
                                             echo "<br>";
