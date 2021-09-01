@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->date('articlesDate');
             $table->time('articlesTime');
             $table->string('articlesEmail');
-            $table->string('articlesContent');
+            $table->text('articlesContent');
             $table->string('articlesTag');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
