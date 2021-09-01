@@ -9,6 +9,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .nav {
+            padding: 0;
+            margin: 0;
+            background-color:rgb(77, 77, 77);
+        }
+
+        li a {
+            display: block;
+            color: black;
+            padding: 14px 16px;
+        }
+
+        li a:hover {
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,12 +48,12 @@
     </div>
     <!--Navigation Bar-->
     <div class="nav">
-        <div class="col" align="center" style="background-color:lavender;"><a href="signin.html">Sign Out</a>
-        </div>
-        <div class="col" align="center" style="background-color:lavender;"><a href="{{ route('article') }}">Add an
-                article</a></div>
-        <div class="col" align="center" style="background-color:lavender;"><a href="aboutus.html">About us</a>
-        </div>
+        <li class="signin"><a href="signin.html">Sign Out</a>
+        </li>
+        <li class="addarticle"><a href="{{ route('article') }}">Add an article</a>
+        </li>
+        <li class="about"><a href="aboutus.html">About us</a>
+        </li>
     </div>
     <!--Main Title-->
     <div class="container.fluid p-3 my-3 bg-dark text-white">
@@ -60,4 +78,3 @@
 </body>
 
 </html>
-
