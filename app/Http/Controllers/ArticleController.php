@@ -8,6 +8,11 @@ use App\Models\Article;
 class ArticleController extends Controller
 {
     //
+    public function index()
+    {
+        return view('addarticle');
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [

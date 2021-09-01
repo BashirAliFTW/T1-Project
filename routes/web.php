@@ -28,6 +28,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/articles', function () {
     return view('articles');
 });
-
+Route::get('/article', [App\Http\Controllers\ArticleController::class, 'index'])->name('article');
 Route::view('form', 'userview');
 Route::view('sumbit', 'articles');
