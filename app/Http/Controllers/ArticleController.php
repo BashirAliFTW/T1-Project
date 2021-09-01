@@ -14,7 +14,7 @@ class ArticleController extends Controller
     }
     public function select(Request $request, $id)
     {
-        return view('article', compact('$id'));
+        return view('article', compact('id'));
     }
 
     public function store(Request $request)
