@@ -14,7 +14,7 @@ class ArticleController extends Controller
     }
     public function select(Request $request, $id)
     {
-        $Article = Appeal::where(['article_id' => $id])->first();
+        $Article = Article::where(['article_id' => $id])->first();
         return view('article', compact('article'));
     }
 
