@@ -13,7 +13,7 @@
                                     @csrf
                                         <div class="form-group">
                                             <p class="text-primary" ><strong>Title</strong></p>
-                                            {{ Form::text('Title',null, array('class' => 'form-control')) }}
+                                            {{ Form::text('title',null, array('class' => 'form-control')) }}
                                         </div>            
                                         <div class="row form-group">
                                             <div class="col">
@@ -27,8 +27,8 @@
                                         </div>
                                         
                                         <div class="form-group">
-                                             <p class="text-primary" ><strong>Description</strong></p>
-                                             {{ Form::textarea('description',null, array('class' => 'form-control')) }}
+                                             <p class="text-primary" ><strong>Content</strong></p>
+                                             {{ Form::textarea('content',null, array('class' => 'form-control')) }}
                                         </div>
                     
                                         <div class="form-group ">
