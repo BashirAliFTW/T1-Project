@@ -65,7 +65,7 @@
                                     </h4>
                                     <p class="">
                                         @foreach ($data as $i)
-                                            $i->name
+                                            <li>{{ $i->name }}</li>
                                         @endforeach
                                     </p>
                                 </div>
