@@ -40,12 +40,16 @@
                     <li class="nav-item active">
                         <a class="nav-link text-primary" href="{{ url('/home') }}">Home<span class="sr-only">(current)</span></a>
                     </li>
+                    @if(Route('login'))
+                        @auth
                     <li class="nav-item">
                         <a class="nav-link text-primary" href="{{ route('article') }}">Add An Article</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-primary disabled" href="#">Edit My Articles</a>
                     </li>
+                        @endauth
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link text-primary disabled" href="#">About us</a>
                     </li>

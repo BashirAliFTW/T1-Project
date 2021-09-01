@@ -11,7 +11,7 @@
                 </div>
 
                 @if (Route::('login'))
-                @auth
+                    @auth
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
                     <x-jet-nav-link  class= "text-primary" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -23,7 +23,7 @@
                         {{ __('Add article') }}
                     </x-jet-nav-link>
                 </div>
-                @endauth
+                    @endauth
                 @endif
 
             </div>
