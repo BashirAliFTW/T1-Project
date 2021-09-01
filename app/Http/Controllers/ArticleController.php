@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function select(Request $request, $id)
     {
         $Article = Article::where(['articleid' => $id])->first();
-        return view('article', compact('article'));
+        return view('article', compact('Article'));
     }
 
     public function store(Request $request)
