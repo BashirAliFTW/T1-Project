@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="ml-3 relative">
-                    <x-jet-dropdown align="right" width="48" style = "padding-right: 5px;">
+                    <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
 
                                 <span class="inline-flex rounded-md">
@@ -73,6 +73,8 @@
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
                             </div>
+
+
                             <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
