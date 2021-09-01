@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-        ul {
+        body ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
@@ -18,7 +18,7 @@
             background-color: rgb(77, 77, 77);
         }
 
-        li:not(.signin) {
+        ul li:not(.signin) {
             float: left;
         }
 
@@ -26,13 +26,13 @@
             float: right;
         }
 
-        li a {
+        ul li a {
             display: block;
             color: black;
             padding: 14px 16px;
         }
 
-        li a:hover {
+        ul li a:hover {
             background-color: rgb(0, 0, 0);
             color: aliceblue;
         }
