@@ -64,9 +64,13 @@
                                       </a>
                                     </h4>
                                     <p class="">
-                                        @foreach ($data as $i)
-                                            <li>{{ $i->name }}</li>
-                                        @endforeach
+                                        <?php
+                                        $articles = DB::table('users')->cursor();
+                                        foreach ($articles as $data) {
+                                            echo $data->name;
+                                            echo "<br>";
+                                        }
+                                        ?>
                                     </p>
                                 </div>
                                 <div class="card-read-more">
