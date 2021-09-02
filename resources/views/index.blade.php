@@ -24,7 +24,7 @@
                 <div class="container">
                     <div class="row">
                         <?php
-                            $articles = DB::table('articles')->groupBy('articlesTag'); 
+                            $articles = DB::table('articles')->groupBy('articlesTag')->get(); 
                             foreach ($articles as $data)  { ?>
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="card">
