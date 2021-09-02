@@ -11,7 +11,7 @@
                 <select name="tags" id="tags">
                     <?php 
                     $tags = DB::table('articles')->pluck('articlesTag');?>
-                    <option value="volvo">{{ $tags }}</option>
+                    <option value=""></option>
                     <option value="computer">Computers</option>
                     <option value="mobile">Mobile</option>
                     <option value="hardware">Hardware</option>
@@ -24,7 +24,7 @@
                 <div class="container">
                     <div class="row">
                         <?php
-                            $articles = DB::table('articles')->cursor(); 
+                            $articles = DB::table('articles')->where('articlesTag',"computer",) 
                             foreach ($articles as $data)  { ?>
                                 <div class="col-xs-12 col-sm-4">
                                     <div class="card">
